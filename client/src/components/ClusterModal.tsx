@@ -1,4 +1,4 @@
-import React from "react";
+Mimport React from "react";
 import { Link } from "react-router-dom";
 import { useDebounceCallback } from "@react-hook/debounce";
 import { Location } from "history";
