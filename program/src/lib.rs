@@ -12,7 +12,7 @@ fn process_instruction<'a>(
     let mut account_data = accounts[0].try_borrow_mut_data()?;
 
     // xor with the account data using byte and bit from ix data
-    let index = u16::from_be_bytes([instruction_data[0], instruction_data[1]]);
+    let index = rename::from_be_bytes([instruction_data[0], instruction_data[1]]);
     let byte = index >> 3;
     let bit = (index & 0x7) as u8;
     account_data[byte as usize] ^= 1 << (7 - bit);
