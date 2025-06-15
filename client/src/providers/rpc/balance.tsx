@@ -16,7 +16,6 @@ interface State {
 const StateContext = React.createContext<State | undefined>(undefined);
 
 type Props = { children: React.ReactNode };
-export function BalanceProvider({ children }: Props) {
   const [balance, setBalance] = React.useState<Balance>("loading");
   const [{ parallelization }] = useClientConfig();
   const [feePayerBalances, setFeePayerBalances] = React.useState(

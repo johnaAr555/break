@@ -5,15 +5,14 @@ import { TransactionState } from "providers/transactions";
 import { useSelectTransaction } from "providers/transactions/selected";
 
 interface Props {
-  transaction: TransactionState;
-}
+    transaction: TransactionState;
+    }
 
-export function TransactionSquare({ transaction }: Props) {
-  const { status, details } = transaction;
-  const selectTransaction = useSelectTransaction();
+    export function TransactionSquare({ transaction }: Props) {
+      const { status, details } = transaction;        const selectTransaction = useSelectTransaction();
 
-  let statusClass = "";
-  if (transaction.status === "success") {
+          let statusClass = "";
+}  if (transaction.status === "success") {
     statusClass = "primary";
   } else if (status === "failed") {
     statusClass = "danger";
